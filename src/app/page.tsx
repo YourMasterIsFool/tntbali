@@ -30,8 +30,6 @@ export default function HomePage() {
 
     return (
       <div className="relative py-12 h-screen w-screen ">
-        
-
         <div className=" z-10 lg:flex lg:px-0 px-6 lg:justify-center">
           <div className="lg:w-2/5 bg-white px-4 pb-16 rounded-xl w-full">
             <div className="logo w-full">
@@ -62,7 +60,7 @@ export default function HomePage() {
               <ul className="flex flex-col lg:items-center">
                 <li className="my-2 lg:w-2/3">
                   <a
-                    href="https://www.instagram.com/bali.tourntravel/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
+                    href="https://www.instagram.com/bali.westayproperty/"
                     className="bg-white items-center space-x-4  w-full lg:px-20 justify-center py-3 transition-all duration-500 hover:border-black flex hover:bg-black hover:text-white rounded-md border border-gray-400"
                   >
                     <BsInstagram />
@@ -113,7 +111,9 @@ export default function HomePage() {
                 <span className="lg:text-sm text-xs">Copyrights</span>
                 <TbNoCopyright />
               </div>
-              <h1 className={`${quickSand.className} font-bold lg:text-sm text-sm`}>
+              <h1
+                className={`${quickSand.className} font-bold lg:text-sm text-sm`}
+              >
                 We Stay.
               </h1>
             </div>
