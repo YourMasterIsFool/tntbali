@@ -3,6 +3,12 @@ import {
   Icon
 } from '@iconify-icon/react'
 
+
+import {
+  Quicksand
+} from 'next/font/google'
+
+
 import {
   BsInstagram,
   BsWhatsapp
@@ -12,17 +18,21 @@ import {
   TbNoCopyright
 } from 'react-icons/tb';
 
-export default function HomePage() {
-    return (
-      <div className="">
-        <Image
-          src={"/images/bali.jpg"}
-          alt="backoground-bali"
-          fill={true}
-          className="fixed top-0 -z-10  left-0 w-screen h-screen object-cover"
-        />
+ const quickSand = Quicksand({
+   weight: "700",
+   subsets: ["latin"],
+   
+ });
 
-        <div className="lg:mt-12 mt-8  z-10 lg:flex lg:px-0 px-6 lg:justify-center">
+export default function HomePage() {
+
+ 
+
+    return (
+      <div className="relative py-12 h-screen w-screen ">
+        
+
+        <div className=" z-10 lg:flex lg:px-0 px-6 lg:justify-center">
           <div className="lg:w-2/5 bg-white px-4 pb-16 rounded-xl w-full">
             <div className="logo w-full">
               <div className="w-full   flex justify-center">
@@ -33,7 +43,7 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            <div className="description mt-2">
+            <div className="description mt-4">
               <div className="text-center">
                 <p className="lg:text-lg text-sm font-semibold">
                   We provide services for your Holiday in Bali.
@@ -53,7 +63,7 @@ export default function HomePage() {
                 <li className="my-2 lg:w-2/3">
                   <a
                     href="https://www.instagram.com/bali.tourntravel/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
-                    className="bg-white items-center space-x-4  w-full lg:px-20 justify-center py-3 transition-all duration-500 hover:border-red-600 flex hover:bg-red-600 hover:text-white rounded-md border border-gray-400"
+                    className="bg-white items-center space-x-4  w-full lg:px-20 justify-center py-3 transition-all duration-500 hover:border-black flex hover:bg-black hover:text-white rounded-md border border-gray-400"
                   >
                     <BsInstagram />
                     <span>Instagram</span>
@@ -100,11 +110,11 @@ export default function HomePage() {
 
             <div className="lg:mt-24 mt-16 flex items-center space-x-2 justify-center">
               <div className="flex items-center">
-                <span>Copyrights</span>
+                <span className="lg:text-sm text-xs">Copyrights</span>
                 <TbNoCopyright />
               </div>
-              <h1 className="text-center font-bold text-sm">
-                Tour n Travel Bali
+              <h1 className={`${quickSand.className} font-bold lg:text-sm text-sm`}>
+                We Stay.
               </h1>
             </div>
           </div>
